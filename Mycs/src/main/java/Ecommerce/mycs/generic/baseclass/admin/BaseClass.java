@@ -8,12 +8,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.safari.SafariDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Parameters;
 
 import Ecommerce.mycs.ObjectRepositery.AdminLoginPage;
 import Ecommerce.mycs.generic.DatabaseUtility.DatabaseUtility;
@@ -22,6 +24,7 @@ import Ecommerce.mycs.generic.FileUtility.JsonUtility;
 import Ecommerce.mycs.generic.FileUtility.PropertiesUtility;
 import Ecommerce.mycs.generic.WebDriverUtility.JavaUtility;
 import Ecommerce.mycs.generic.WebDriverUtility.WebDriverUtility;
+
 /**
  * @author Gurup
  */
@@ -40,9 +43,10 @@ public class BaseClass {
 
 	}
 
+	//@Parameters("browser")
 	@BeforeClass(groups = { "end to end", "smoke", "dataflow" })
 	public void configBC() throws IOException {
-		String browser = pLib.getDataFromProperties("browser");
+		String browser = System.getProperty("adminBrowser", pLib.getDataFromProperties("browser"));
 
 		if (browser.equals("chrome")) {
 			driver = new ChromeDriver();
@@ -50,7 +54,9 @@ public class BaseClass {
 			driver = new EdgeDriver();
 		} else if (browser.equals("firefox")) {
 			driver = new FirefoxDriver();
-		} else {
+		} else if(browser.equals("safari")) {
+			driver=new SafariDriver();
+		}else {
 			driver = new ChromeDriver();
 		}
 		String url = pLib.getDataFromProperties("adminurl");
@@ -63,8 +69,8 @@ public class BaseClass {
 	@BeforeMethod(groups = { "end to end", "smoke", "dataflow" })
 	public void configBM() throws IOException {
 
-		String adminun = pLib.getDataFromProperties("adminun");
-		String adminpassword = pLib.getDataFromProperties("adminpassword");
+		String adminun = System.getProperty("adminUn", pLib.getDataFromProperties("adminun"));
+		String adminpassword = System.getProperty("adminPassword", pLib.getDataFromProperties("adminpassword"));
 
 		AdminLoginPage admin = new AdminLoginPage(driver);
 		admin.adminLogin(adminun, adminpassword);

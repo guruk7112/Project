@@ -1,40 +1,513 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="3" total="4" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="8" passed="0" failed="0" skipped="8">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-04-02T18:20:01 IST" name="Suite" finished-at="2025-04-02T18:20:20 IST" duration-ms="19217">
+  <suite started-at="2025-04-04T09:59:27 IST" name="Suite" finished-at="2025-04-04T09:59:27 IST" duration-ms="214">
     <groups>
       <group name="dataflow">
-        <method signature="AdminModuleTest.adminCategoryTest()[pri:2, instance:com.Ecommerce.Mycs.UserModules.AdminModuleTest@117e949d]" name="adminCategoryTest" class="com.Ecommerce.Mycs.UserModules.AdminModuleTest"/>
+        <method signature="OrderTest.productInWishListTest()[pri:1, instance:com.Ecommerce.Mycs.UserModules.OrderTest@2638011]" name="productInWishListTest" class="com.Ecommerce.Mycs.UserModules.OrderTest"/>
+        <method signature="AdminModuleTest.adminCategoryTest()[pri:2, instance:com.Ecommerce.Mycs.UserModules.AdminModuleTest@7a675056]" name="adminCategoryTest" class="com.Ecommerce.Mycs.UserModules.AdminModuleTest"/>
       </group> <!-- dataflow -->
+      <group name="end to end">
+        <method signature="OrderTest.orderPlacedInTodaysOrder()[pri:2, instance:com.Ecommerce.Mycs.UserModules.OrderTest@2638011]" name="orderPlacedInTodaysOrder" class="com.Ecommerce.Mycs.UserModules.OrderTest"/>
+        <method signature="AdminModuleTest.insertProductTest()[pri:3, instance:com.Ecommerce.Mycs.UserModules.AdminModuleTest@7a675056]" name="insertProductTest" class="com.Ecommerce.Mycs.UserModules.AdminModuleTest"/>
+        <method signature="AdminModuleTest.modifyProductAndaddToCartTest()[pri:4, instance:com.Ecommerce.Mycs.UserModules.AdminModuleTest@7a675056]" name="modifyProductAndaddToCartTest" class="com.Ecommerce.Mycs.UserModules.AdminModuleTest"/>
+        <method signature="OrderTest.placeOrderTest()[pri:4, instance:com.Ecommerce.Mycs.UserModules.OrderTest@2638011]" name="placeOrderTest" class="com.Ecommerce.Mycs.UserModules.OrderTest"/>
+      </group> <!-- end to end -->
+      <group name="smoke">
+        <method signature="OrderTest.removeProductTest()[pri:-1, instance:com.Ecommerce.Mycs.UserModules.OrderTest@2638011]" name="removeProductTest" class="com.Ecommerce.Mycs.UserModules.OrderTest"/>
+        <method signature="AdminModuleTest.adminDeleteProduct()[pri:1, instance:com.Ecommerce.Mycs.UserModules.AdminModuleTest@7a675056]" name="adminDeleteProduct" class="com.Ecommerce.Mycs.UserModules.AdminModuleTest"/>
+      </group> <!-- smoke -->
     </groups>
-    <test started-at="2025-04-02T18:20:01 IST" name="Test" finished-at="2025-04-02T18:20:20 IST" duration-ms="19217">
-      <class name="com.Ecommerce.Mycs.UserModules.AdminModuleTest">
-        <test-method is-config="true" signature="conigBS()[pri:0, instance:com.Ecommerce.Mycs.UserModules.AdminModuleTest@117e949d]" started-at="2025-04-02T18:20:00 IST" name="conigBS" finished-at="2025-04-02T18:20:01 IST" duration-ms="604" status="PASS">
+    <test started-at="2025-04-04T09:59:27 IST" name="Test" finished-at="2025-04-04T09:59:27 IST" duration-ms="214">
+      <class name="com.Ecommerce.Mycs.UserModules.OrderTest">
+        <test-method is-config="true" signature="conigBS()[pri:0, instance:com.Ecommerce.Mycs.UserModules.OrderTest@2638011]" started-at="2025-04-04T09:59:26 IST" name="conigBS" finished-at="2025-04-04T09:59:27 IST" duration-ms="890" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- conigBS -->
-        <test-method is-config="true" signature="configBC()[pri:0, instance:com.Ecommerce.Mycs.UserModules.AdminModuleTest@117e949d]" started-at="2025-04-02T18:20:01 IST" name="configBC" finished-at="2025-04-02T18:20:08 IST" duration-ms="6813" status="PASS">
+        <test-method is-config="true" signature="configBC(java.lang.String)[pri:0, instance:com.Ecommerce.Mycs.UserModules.OrderTest@2638011]" started-at="2025-04-04T09:59:27 IST" name="configBC" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1743740967727" status="FAIL">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Parameter 'browser' is required by BeforeClass on method configBC but has not been marked @Optional or defined
+in C:\Users\Gurup\git\repository7\Mycs\listeners.xml]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'browser' is required by BeforeClass on method configBC but has not been marked @Optional or defined
+in C:\Users\Gurup\git\repository7\Mycs\listeners.xml
+at org.testng.internal.Parameters.createParams(Parameters.java:264)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:352)
+at org.testng.internal.Parameters.createParameters(Parameters.java:690)
+at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:163)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:313)
+at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configBC -->
-        <test-method is-config="true" signature="configBM()[pri:0, instance:com.Ecommerce.Mycs.UserModules.AdminModuleTest@117e949d]" started-at="2025-04-02T18:20:08 IST" name="configBM" finished-at="2025-04-02T18:20:08 IST" duration-ms="625" status="PASS">
+        <test-method is-config="true" signature="configBM()[pri:0, instance:com.Ecommerce.Mycs.UserModules.OrderTest@2638011]" started-at="2025-04-04T09:59:27 IST" name="configBM" finished-at="2025-04-04T09:59:27 IST" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configBM -->
-        <test-method signature="adminCategoryTest()[pri:2, instance:com.Ecommerce.Mycs.UserModules.AdminModuleTest@117e949d]" started-at="2025-04-02T18:20:08 IST" name="adminCategoryTest" finished-at="2025-04-02T18:20:17 IST" duration-ms="8850" status="PASS">
+        <test-method signature="removeProductTest()[pri:-1, instance:com.Ecommerce.Mycs.UserModules.OrderTest@2638011]" started-at="2025-04-04T09:59:27 IST" name="removeProductTest" finished-at="2025-04-04T09:59:27 IST" duration-ms="0" status="SKIP">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Parameter 'browser' is required by BeforeClass on method configBC but has not been marked @Optional or defined
+in C:\Users\Gurup\git\repository7\Mycs\listeners.xml]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'browser' is required by BeforeClass on method configBC but has not been marked @Optional or defined
+in C:\Users\Gurup\git\repository7\Mycs\listeners.xml
+at org.testng.internal.Parameters.createParams(Parameters.java:264)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:352)
+at org.testng.internal.Parameters.createParameters(Parameters.java:690)
+at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:163)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:313)
+at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- adminCategoryTest -->
-        <test-method is-config="true" signature="configAM()[pri:0, instance:com.Ecommerce.Mycs.UserModules.AdminModuleTest@117e949d]" started-at="2025-04-02T18:20:17 IST" name="configAM" finished-at="2025-04-02T18:20:19 IST" duration-ms="1364" status="PASS">
+        </test-method> <!-- removeProductTest -->
+        <test-method is-config="true" signature="configAM()[pri:0, instance:com.Ecommerce.Mycs.UserModules.OrderTest@2638011]" started-at="2025-04-04T09:59:27 IST" name="configAM" finished-at="2025-04-04T09:59:27 IST" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAM -->
-        <test-method is-config="true" signature="configAC()[pri:0, instance:com.Ecommerce.Mycs.UserModules.AdminModuleTest@117e949d]" started-at="2025-04-02T18:20:19 IST" name="configAC" finished-at="2025-04-02T18:20:20 IST" duration-ms="1485" status="PASS">
+        <test-method is-config="true" signature="configBM()[pri:0, instance:com.Ecommerce.Mycs.UserModules.OrderTest@2638011]" started-at="2025-04-04T09:59:27 IST" name="configBM" finished-at="2025-04-04T09:59:27 IST" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBM -->
+        <test-method signature="productInWishListTest()[pri:1, instance:com.Ecommerce.Mycs.UserModules.OrderTest@2638011]" started-at="2025-04-04T09:59:27 IST" name="productInWishListTest" finished-at="2025-04-04T09:59:27 IST" duration-ms="0" status="SKIP">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Parameter 'browser' is required by BeforeClass on method configBC but has not been marked @Optional or defined
+in C:\Users\Gurup\git\repository7\Mycs\listeners.xml]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'browser' is required by BeforeClass on method configBC but has not been marked @Optional or defined
+in C:\Users\Gurup\git\repository7\Mycs\listeners.xml
+at org.testng.internal.Parameters.createParams(Parameters.java:264)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:352)
+at org.testng.internal.Parameters.createParameters(Parameters.java:690)
+at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:163)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:313)
+at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- productInWishListTest -->
+        <test-method is-config="true" signature="configAM()[pri:0, instance:com.Ecommerce.Mycs.UserModules.OrderTest@2638011]" started-at="2025-04-04T09:59:27 IST" name="configAM" finished-at="2025-04-04T09:59:27 IST" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAM -->
+        <test-method is-config="true" signature="configBM()[pri:0, instance:com.Ecommerce.Mycs.UserModules.OrderTest@2638011]" started-at="2025-04-04T09:59:27 IST" name="configBM" finished-at="2025-04-04T09:59:27 IST" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBM -->
+        <test-method signature="orderPlacedInTodaysOrder()[pri:2, instance:com.Ecommerce.Mycs.UserModules.OrderTest@2638011]" started-at="2025-04-04T09:59:27 IST" name="orderPlacedInTodaysOrder" finished-at="2025-04-04T09:59:27 IST" duration-ms="0" status="SKIP">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Parameter 'browser' is required by BeforeClass on method configBC but has not been marked @Optional or defined
+in C:\Users\Gurup\git\repository7\Mycs\listeners.xml]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'browser' is required by BeforeClass on method configBC but has not been marked @Optional or defined
+in C:\Users\Gurup\git\repository7\Mycs\listeners.xml
+at org.testng.internal.Parameters.createParams(Parameters.java:264)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:352)
+at org.testng.internal.Parameters.createParameters(Parameters.java:690)
+at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:163)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:313)
+at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- orderPlacedInTodaysOrder -->
+        <test-method is-config="true" signature="configAM()[pri:0, instance:com.Ecommerce.Mycs.UserModules.OrderTest@2638011]" started-at="2025-04-04T09:59:27 IST" name="configAM" finished-at="2025-04-04T09:59:27 IST" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAM -->
+        <test-method is-config="true" signature="configBM()[pri:0, instance:com.Ecommerce.Mycs.UserModules.OrderTest@2638011]" started-at="2025-04-04T09:59:27 IST" name="configBM" finished-at="2025-04-04T09:59:27 IST" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBM -->
+        <test-method signature="placeOrderTest()[pri:4, instance:com.Ecommerce.Mycs.UserModules.OrderTest@2638011]" started-at="2025-04-04T09:59:27 IST" name="placeOrderTest" finished-at="2025-04-04T09:59:27 IST" duration-ms="0" status="SKIP">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Parameter 'browser' is required by BeforeClass on method configBC but has not been marked @Optional or defined
+in C:\Users\Gurup\git\repository7\Mycs\listeners.xml]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'browser' is required by BeforeClass on method configBC but has not been marked @Optional or defined
+in C:\Users\Gurup\git\repository7\Mycs\listeners.xml
+at org.testng.internal.Parameters.createParams(Parameters.java:264)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:352)
+at org.testng.internal.Parameters.createParameters(Parameters.java:690)
+at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:163)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:313)
+at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- placeOrderTest -->
+        <test-method is-config="true" signature="configAM()[pri:0, instance:com.Ecommerce.Mycs.UserModules.OrderTest@2638011]" started-at="2025-04-04T09:59:27 IST" name="configAM" finished-at="2025-04-04T09:59:27 IST" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAM -->
+        <test-method is-config="true" signature="configAC()[pri:0, instance:com.Ecommerce.Mycs.UserModules.OrderTest@2638011]" started-at="2025-04-04T09:59:27 IST" name="configAC" finished-at="2025-04-04T09:59:27 IST" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAC -->
-        <test-method is-config="true" signature="configAS()[pri:0, instance:com.Ecommerce.Mycs.UserModules.AdminModuleTest@117e949d]" started-at="2025-04-02T18:20:20 IST" name="configAS" finished-at="2025-04-02T18:20:20 IST" duration-ms="13" status="PASS">
+        <test-method is-config="true" signature="configAS()[pri:0, instance:com.Ecommerce.Mycs.UserModules.OrderTest@2638011]" started-at="2025-04-04T09:59:28 IST" name="configAS" finished-at="2025-04-04T09:59:28 IST" duration-ms="14" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAS -->
+      </class> <!-- com.Ecommerce.Mycs.UserModules.OrderTest -->
+      <class name="com.Ecommerce.Mycs.UserModules.AdminModuleTest">
+        <test-method is-config="true" signature="conigBS()[pri:0, instance:com.Ecommerce.Mycs.UserModules.AdminModuleTest@7a675056]" started-at="2025-04-04T09:59:27 IST" name="conigBS" finished-at="2025-04-04T09:59:27 IST" duration-ms="422" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- conigBS -->
+        <test-method is-config="true" signature="configBC(java.lang.String)[pri:0, instance:com.Ecommerce.Mycs.UserModules.AdminModuleTest@7a675056]" started-at="2025-04-04T09:59:27 IST" name="configBC" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1743740967607" status="FAIL">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Parameter 'browser' is required by BeforeClass on method configBC but has not been marked @Optional or defined
+in C:\Users\Gurup\git\repository7\Mycs\listeners.xml]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'browser' is required by BeforeClass on method configBC but has not been marked @Optional or defined
+in C:\Users\Gurup\git\repository7\Mycs\listeners.xml
+at org.testng.internal.Parameters.createParams(Parameters.java:264)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:352)
+at org.testng.internal.Parameters.createParameters(Parameters.java:690)
+at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:163)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:313)
+at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBC -->
+        <test-method is-config="true" signature="configBM()[pri:0, instance:com.Ecommerce.Mycs.UserModules.AdminModuleTest@7a675056]" started-at="2025-04-04T09:59:27 IST" name="configBM" finished-at="2025-04-04T09:59:27 IST" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBM -->
+        <test-method signature="adminDeleteProduct()[pri:1, instance:com.Ecommerce.Mycs.UserModules.AdminModuleTest@7a675056]" started-at="2025-04-04T09:59:27 IST" name="adminDeleteProduct" finished-at="2025-04-04T09:59:27 IST" duration-ms="0" status="SKIP">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Parameter 'browser' is required by BeforeClass on method configBC but has not been marked @Optional or defined
+in C:\Users\Gurup\git\repository7\Mycs\listeners.xml]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'browser' is required by BeforeClass on method configBC but has not been marked @Optional or defined
+in C:\Users\Gurup\git\repository7\Mycs\listeners.xml
+at org.testng.internal.Parameters.createParams(Parameters.java:264)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:352)
+at org.testng.internal.Parameters.createParameters(Parameters.java:690)
+at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:163)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:313)
+at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- adminDeleteProduct -->
+        <test-method is-config="true" signature="configAM()[pri:0, instance:com.Ecommerce.Mycs.UserModules.AdminModuleTest@7a675056]" started-at="2025-04-04T09:59:27 IST" name="configAM" finished-at="2025-04-04T09:59:27 IST" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAM -->
+        <test-method is-config="true" signature="configBM()[pri:0, instance:com.Ecommerce.Mycs.UserModules.AdminModuleTest@7a675056]" started-at="2025-04-04T09:59:27 IST" name="configBM" finished-at="2025-04-04T09:59:27 IST" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBM -->
+        <test-method signature="adminCategoryTest()[pri:2, instance:com.Ecommerce.Mycs.UserModules.AdminModuleTest@7a675056]" started-at="2025-04-04T09:59:27 IST" name="adminCategoryTest" finished-at="2025-04-04T09:59:27 IST" duration-ms="0" status="SKIP">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Parameter 'browser' is required by BeforeClass on method configBC but has not been marked @Optional or defined
+in C:\Users\Gurup\git\repository7\Mycs\listeners.xml]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'browser' is required by BeforeClass on method configBC but has not been marked @Optional or defined
+in C:\Users\Gurup\git\repository7\Mycs\listeners.xml
+at org.testng.internal.Parameters.createParams(Parameters.java:264)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:352)
+at org.testng.internal.Parameters.createParameters(Parameters.java:690)
+at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:163)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:313)
+at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- adminCategoryTest -->
+        <test-method is-config="true" signature="configAM()[pri:0, instance:com.Ecommerce.Mycs.UserModules.AdminModuleTest@7a675056]" started-at="2025-04-04T09:59:27 IST" name="configAM" finished-at="2025-04-04T09:59:27 IST" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAM -->
+        <test-method is-config="true" signature="configBM()[pri:0, instance:com.Ecommerce.Mycs.UserModules.AdminModuleTest@7a675056]" started-at="2025-04-04T09:59:27 IST" name="configBM" finished-at="2025-04-04T09:59:27 IST" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBM -->
+        <test-method signature="insertProductTest()[pri:3, instance:com.Ecommerce.Mycs.UserModules.AdminModuleTest@7a675056]" started-at="2025-04-04T09:59:27 IST" name="insertProductTest" finished-at="2025-04-04T09:59:27 IST" duration-ms="0" status="SKIP">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Parameter 'browser' is required by BeforeClass on method configBC but has not been marked @Optional or defined
+in C:\Users\Gurup\git\repository7\Mycs\listeners.xml]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'browser' is required by BeforeClass on method configBC but has not been marked @Optional or defined
+in C:\Users\Gurup\git\repository7\Mycs\listeners.xml
+at org.testng.internal.Parameters.createParams(Parameters.java:264)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:352)
+at org.testng.internal.Parameters.createParameters(Parameters.java:690)
+at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:163)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:313)
+at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- insertProductTest -->
+        <test-method is-config="true" signature="configAM()[pri:0, instance:com.Ecommerce.Mycs.UserModules.AdminModuleTest@7a675056]" started-at="2025-04-04T09:59:27 IST" name="configAM" finished-at="2025-04-04T09:59:27 IST" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAM -->
+        <test-method is-config="true" signature="configBM()[pri:0, instance:com.Ecommerce.Mycs.UserModules.AdminModuleTest@7a675056]" started-at="2025-04-04T09:59:27 IST" name="configBM" finished-at="2025-04-04T09:59:27 IST" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBM -->
+        <test-method signature="modifyProductAndaddToCartTest()[pri:4, instance:com.Ecommerce.Mycs.UserModules.AdminModuleTest@7a675056]" started-at="2025-04-04T09:59:27 IST" name="modifyProductAndaddToCartTest" finished-at="2025-04-04T09:59:27 IST" duration-ms="0" status="SKIP">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Parameter 'browser' is required by BeforeClass on method configBC but has not been marked @Optional or defined
+in C:\Users\Gurup\git\repository7\Mycs\listeners.xml]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'browser' is required by BeforeClass on method configBC but has not been marked @Optional or defined
+in C:\Users\Gurup\git\repository7\Mycs\listeners.xml
+at org.testng.internal.Parameters.createParams(Parameters.java:264)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:352)
+at org.testng.internal.Parameters.createParameters(Parameters.java:690)
+at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:163)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:313)
+at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- modifyProductAndaddToCartTest -->
+        <test-method is-config="true" signature="configAM()[pri:0, instance:com.Ecommerce.Mycs.UserModules.AdminModuleTest@7a675056]" started-at="2025-04-04T09:59:27 IST" name="configAM" finished-at="2025-04-04T09:59:27 IST" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAM -->
+        <test-method is-config="true" signature="configAC()[pri:0, instance:com.Ecommerce.Mycs.UserModules.AdminModuleTest@7a675056]" started-at="2025-04-04T09:59:27 IST" name="configAC" finished-at="2025-04-04T09:59:27 IST" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAC -->
+        <test-method is-config="true" signature="configAS()[pri:0, instance:com.Ecommerce.Mycs.UserModules.AdminModuleTest@7a675056]" started-at="2025-04-04T09:59:28 IST" name="configAS" finished-at="2025-04-04T09:59:28 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAS -->

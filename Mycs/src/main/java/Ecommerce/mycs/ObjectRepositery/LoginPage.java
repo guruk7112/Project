@@ -56,10 +56,4 @@ public void loginTOApplication(String email,String password) throws InterruptedE
 	loginPassword.sendKeys(password);
 	loginButton.click();
 }
-
-
-
-
-
-
 }

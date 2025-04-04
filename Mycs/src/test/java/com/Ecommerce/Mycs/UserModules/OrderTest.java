@@ -71,7 +71,7 @@ public class OrderTest extends BaseClass {
 		
 		ProductCategoryPage category = new ProductCategoryPage(driver);
 		WebElement addButton = category.getAddToCart();
-		wLib.getWebDriverWaitClickable(driver, 20, addButton);
+		wLib.getWebDriverWaitClickable(driver,  addButton);
 		addButton.click();
 		wLib.getAllertAccept(driver);
 		
@@ -143,9 +143,7 @@ public class OrderTest extends BaseClass {
 		String password = pLib.getDataFromProperties("password");
 		home.getUserLoginLink().click();
 		LoginPage login=new LoginPage(driver);
-		login.loginTOApplication(email, password);
-		
-		
+		login.loginTOApplication(email, password);		
 	}
 
 }

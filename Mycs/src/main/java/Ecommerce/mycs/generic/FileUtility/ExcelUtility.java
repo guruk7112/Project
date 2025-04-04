@@ -94,5 +94,12 @@ public class ExcelUtility {
 		System.out.println(data1);
 		System.out.println(data2);
 	}
+	public CharSequence getDataFromXlsc(String sheet, int row, int cell) throws Exception {
+	    FileInputStream fis = new FileInputStream("C:\\eclipse\\Mycs\\src\\main\\resources\\entire.xlsx");
+	    Workbook wb = WorkbookFactory.create(fis);
+	    CharSequence data = wb.getSheet(sheet).getRow(row).getCell(cell).getStringCellValue();
+	    wb.close();
+	    return data;
 
+}
 }

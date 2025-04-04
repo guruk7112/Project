@@ -3,17 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.Ecommerce.Mycs.UserModules.AdminModuleTest">
+      <class name="com.Ecommerce.Mycs.UserModules.OrderTest">
         <methods>
-          <include name="modifyProductAndaddToCartTest"/>
+          <include name="configBM"/>
           <include name="configBC"/>
-          <include name="configAM"/>
+          <include name="removeProductTest"/>
           <include name="configAC"/>
           <include name="configAS"/>
+          <include name="configAM"/>
           <include name="conigBS"/>
-          <include name="configBM"/>
         </methods>
-      </class> <!-- com.Ecommerce.Mycs.UserModules.AdminModuleTest -->
+      </class> <!-- com.Ecommerce.Mycs.UserModules.OrderTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

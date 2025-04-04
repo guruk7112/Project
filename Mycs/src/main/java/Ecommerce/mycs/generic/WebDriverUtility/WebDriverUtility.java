@@ -92,8 +92,8 @@ public class WebDriverUtility {
 	}
 
 	/* Syncronization */
-	public void getWebDriverWaitClickable(WebDriver driver, int seconds, WebElement element) {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(seconds));
+	public void getWebDriverWaitClickable(WebDriver driver, WebElement element) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.elementToBeClickable(element));
 	}
 

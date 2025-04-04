@@ -1,4 +1,6 @@
 package Ecommerce.mycs.ObjectRepositery;
+import java.net.URL;
+
 /**
  * @author Gurup
  */
@@ -101,11 +103,8 @@ public void insertProduct(String pname , String pcompany, String beforDiscount,S
 	shippingCharge.sendKeys(shippingcharge);
 	wLib.getScrollByamount(0, 400, driver);
 	wLib.getSelectByIndex(pAvailabilityDD, 1);
-
+    
 	
 	insertButton.click();
-	
-	
-	
 }
 }

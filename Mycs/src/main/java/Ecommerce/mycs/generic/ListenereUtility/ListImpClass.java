@@ -20,14 +20,14 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 
 import Ecommerce.mycs.generic.baseclass.BaseClass;
 
-public class LIstImpClass extends BaseClass implements ISuiteListener, ITestListener {
+public class ListImpClass extends BaseClass implements ISuiteListener, ITestListener {
 
 	ExtentReports report;
 	ExtentTest test;
 	String time;	String methodName;
 
 	public void onStart(ISuite suite) {
-		ExtentSparkReporter spark = new ExtentSparkReporter("C:\\eclipse\\Mycs\\Screenshots");
+		ExtentSparkReporter spark = new ExtentSparkReporter("C:\\Users\\Gurup\\git\\repository7\\Mycs\\Screenshots.html");
 		spark.config().setDocumentTitle("Document Title");
 		spark.config().setReportName("ReportName");
 		spark.config().setTheme(Theme.DARK);
@@ -74,9 +74,11 @@ public class LIstImpClass extends BaseClass implements ISuiteListener, ITestList
 	}
 
 	public void onStart(ITestContext context) {
+		
 	}
 
 	public void onFinish(ITestContext context) {
+		report.flush();
 	}
 
 	public void onFinish(ISuite suite) {

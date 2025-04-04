@@ -8,12 +8,17 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.safari.SafariDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Parameters;
+
+import com.beust.jcommander.Parameter;
+
 import Ecommerce.mycs.ObjectRepositery.LoginPage;
 import Ecommerce.mycs.ObjectRepositery.MycartPage;
 import Ecommerce.mycs.generic.DatabaseUtility.DatabaseUtility;
@@ -39,10 +44,10 @@ public class BaseClass {
 		dLib.connectToDataBase();
 
 	}
-
+	//@Parameters("browser")
 	@BeforeClass(groups= { "end to end","smoke","dataflow" })
-	public void configBC() throws IOException {
-		String browser = pLib.getDataFromProperties("browser");
+	public void configBC() throws IOException {//public void configBC(String browse)
+		String browser =System.getProperty("browser",pLib.getDataFromProperties("browser"));// String browser = browse;
 
 		if (browser.equals("chrome")) {
 			driver = new ChromeDriver();
@@ -50,7 +55,9 @@ public class BaseClass {
 			driver = new EdgeDriver();
 		} else if (browser.equals("firefox")) {
 			driver = new FirefoxDriver();
-		} else {
+		} else if(browser.equals("safari")) {
+			driver=new SafariDriver();
+		}else {
 			driver = new ChromeDriver();
 		}
 		String url = pLib.getDataFromProperties("url");
@@ -62,8 +69,8 @@ public class BaseClass {
 
 	@BeforeMethod(groups= { "end to end","smoke","dataflow" })
 	public void configBM() throws IOException, InterruptedException {
-		String email = pLib.getDataFromProperties("email");
-		String password = pLib.getDataFromProperties("password");
+		String email = System.getProperty("email",pLib.getDataFromProperties("email"));
+		String password =System.getProperty("password", pLib.getDataFromProperties("password"));
 
 		LoginPage login = new LoginPage(driver);
 		login.loginTOApplication(email, password);

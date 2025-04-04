@@ -21,11 +21,9 @@ public class UtilityObjectClass {
 		UtilityObjectClass.sdriver = sdriver;
 	}
 
-	public static ThreadLocal<ExtentTest> getTest() {
-		return test;
+	public static void setTest(ThreadLocal<ExtentTest> test2) {
+		UtilityObjectClass.test = test2;
 	}
 
-	public static void setTest(ThreadLocal<ExtentTest> test) {
-		UtilityObjectClass.test = test;
-	}
+	
 }

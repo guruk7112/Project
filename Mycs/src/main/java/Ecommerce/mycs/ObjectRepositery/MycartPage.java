@@ -15,7 +15,7 @@ public class MycartPage extends BaseClass {
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(xpath = "//a[@href='logout.php']")
+	@FindBy(xpath = "//a[@href='logout.php'][text()='Logout']")
 	private WebElement logoutLink;
 
 	@FindBy(xpath = "//a[contains(text(),' Books')]")
