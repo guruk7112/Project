@@ -5,13 +5,11 @@
     <classes>
       <class name="com.Ecommerce.Mycs.UserModules.AdminModuleTest">
         <methods>
-          <include name="insertProductTest"/>
-          <include name="modifyProductAndaddToCartTest"/>
           <include name="configBC"/>
+          <include name="modifyProductAndaddToCartTest"/>
           <include name="configAM"/>
           <include name="configAC"/>
           <include name="configAS"/>
-          <include name="adminCategoryTest"/>
           <include name="conigBS"/>
           <include name="configBM"/>
         </methods>

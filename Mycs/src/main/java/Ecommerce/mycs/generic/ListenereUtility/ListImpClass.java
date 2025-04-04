@@ -61,9 +61,7 @@ public class ListImpClass extends BaseClass implements ISuiteListener, ITestList
 	}
 
 	public void onTestSkipped(ITestResult result) {
-		test.log(Status.SKIP, result.getMethod().getMethodName());
-
-		
+		test.log(Status.SKIP, result.getMethod().getMethodName());	
 	}
 
 	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
@@ -78,7 +76,7 @@ public class ListImpClass extends BaseClass implements ISuiteListener, ITestList
 	}
 
 	public void onFinish(ITestContext context) {
-		report.flush();
+	
 	}
 
 	public void onFinish(ISuite suite) {
